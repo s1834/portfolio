@@ -3,9 +3,10 @@ import { About } from "@/components/pages/About";
 import { Dock } from "@/components/pages/Dock";
 import { Experience } from "@/components/pages/Experience";
 import { Achievements } from "@/components/pages/Achievements";
+import { Projects } from "@/components/pages/Projects";
 // import About from "./components/About";
 import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -16,8 +17,8 @@ export default function Home() {
       <Dock />
       <Experience />
       <Achievements />
-      <Skills />
       <Projects />
+      <Skills />
     </div>
   );
 }
