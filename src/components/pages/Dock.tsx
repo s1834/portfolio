@@ -11,6 +11,7 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/pages/ThemeToggle";
 
 export function Dock() {
   const links = [
@@ -70,7 +71,17 @@ export function Dock() {
       ),
       href: "#",
     },
+    {
+      title: "Theme",
+      icon: (
+        <div className="flex items-center justify-center h-full w-full">
+          <ThemeToggle />
+        </div>
+      ),
+      href: "#",
+    },
   ];
+
   return (
     <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center py-2 z-50">
       <FloatingDock
