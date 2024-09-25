@@ -15,10 +15,11 @@ export function About() {
             challenges, <br /> always exploring new technologies to enhance user
             experiences and <br /> create innovative solutions.
             <br /> <br /> <br />
-            <a href="#Contact" className=" cursor-pointer z-50">
-              <span className="text-white/60  text-md underline">
-                ➞Get in touch
-              </span>
+            <a
+              href="#Contact"
+              className=" cursor-pointer z-50 text-white/60 text-md"
+            >
+              ➞<span className="underline">Get in touch</span>
             </a>
           </p>
         </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import Link from "next/link";
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandFigma } from "@tabler/icons-react";
 
 export function Projects() {
   const cards = [
@@ -12,49 +12,49 @@ export function Projects() {
       title: "Portfolio",
       description: "#nextjs #tailwindcss #typescript",
       imageSrc: "/images/projects/portfolio.png",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://github.com/s1834/portfolio",
     },
     {
       title: "Skill Connect",
       description: "#nextjs #mongodb #tailwindcss #typescript",
       imageSrc: "/images/projects/skill-connect.png",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://github.com/s1834/skill-connect",
     },
     {
       title: "Recap",
       description: "#swift #figma",
       imageSrc: "/images/projects/recap.jpeg",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://www.figma.com/design/wqGScOcEbzKn30uZ60U81a/Recap",
     },
     {
       title: "Forkify App",
       description: "#javascript #html #css",
       imageSrc: "/images/projects/forkify.png",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://github.com/s1834/forkify-app",
     },
     {
       title: "Employee Management System",
       description: "#reactjs #nodejs #mysql #tailwindcss #javascript",
       imageSrc: "/images/projects/employee-management-system.png",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://github.com/s1834/employee-management-system",
     },
     {
       title: "Kidzee Website",
       description: "#html #css",
       imageSrc: "/images/projects/kidzee.png",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://github.com/s1834/kidzee-website",
     },
     {
       title: "Pet Sales System",
       description: "#python #flask #html #tailwindcss",
       imageSrc: "/images/projects/pet-sales-system.png",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://github.com/s1834/Pet-Sales-System",
     },
     {
       title: "FOSS Project: FIYOC",
       description: "#javascript #html #tailwindcss",
       imageSrc: "/images/projects/fiyoc.png",
-      link: "https://twitter.com/mannupaaji",
+      link: "https://github.com/s1834/FOSS-PROJECT",
     },
   ];
 
