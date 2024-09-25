@@ -1,15 +1,11 @@
-import Image from "next/image";
-import { About } from "@/components/pages/About";
-import { Dock } from "@/components/pages/Dock";
-import { Experience } from "@/components/pages/Experience";
-import { Achievements } from "@/components/pages/Achievements";
-import { Projects } from "@/components/pages/Projects";
-import { Skills } from "@/components/pages/Skills";
-import { Contact } from "@/components/pages/Contact";
-import { Temp } from "@/components/pages/Temp";
-// import About from "./components/About";
-// import Skills from "./components/Skills";
-// import Projects from "./components/Projects";
+import { About } from "@/app/components/pages/About";
+import { Dock } from "@/app/components/pages/Dock";
+import { Experience } from "@/app/components/pages/Experience";
+import { Skills } from "@/app/components/pages/Skills";
+import { Projects } from "@/app/components/pages/Projects";
+import { Achievements } from "@/app/components/pages/Achievements";
+import { Contact } from "@/app/components/pages/Contact";
+import { Temp } from "@/app/components/pages/Temp";
 
 export default function Home() {
   return (
@@ -19,11 +15,11 @@ export default function Home() {
       <About />
       <Dock />
       <Experience />
-      <Achievements />
-      <Projects />
       <Skills />
-      <Temp />
+      <Projects />
+      <Achievements />
       <Contact />
+      <Temp />
     </div>
   );
 }
