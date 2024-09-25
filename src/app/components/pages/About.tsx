@@ -16,7 +16,9 @@ export function About() {
             experiences and <br /> create innovative solutions.
             <br /> <br /> <br />
             <a href="#Contact" className=" cursor-pointer z-50">
-              <p className="text-white/60  text-md underline">➞Get in touch</p>
+              <span className="text-white/60  text-md underline">
+                ➞Get in touch
+              </span>
             </a>
           </p>
         </div>
