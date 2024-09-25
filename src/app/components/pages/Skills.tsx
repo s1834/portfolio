@@ -90,7 +90,10 @@ const slugs = [
 
 export function Skills() {
   return (
-    <div className="h-full w-full bg-black flex flex-col items-center justify-start overflow-hidden rounded-md">
+    <div
+      className="h-full w-full bg-black flex flex-col items-center justify-start overflow-hidden rounded-md"
+      id="Skills"
+    >
       <BackgroundBeamsWithCollision>
         <div className="flex flex-col items-center space-y-6">
           {/* Skills heading */}

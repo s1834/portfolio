@@ -67,7 +67,7 @@ export function Achievements() {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full" id="Achievements">
       <Timeline data={data} />
     </div>
   );
