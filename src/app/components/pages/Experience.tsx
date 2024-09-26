@@ -201,4 +201,19 @@ const data = [
       />
     ),
   },
+  {
+    category: "Volunteer",
+    title: "Cancer Aid Society",
+    src: "/images/experience/cancer-aid-society.jpeg",
+    content: (
+      <Content
+        content={[
+          "Volunteered for the Nationwide Cancer Control Programme to promote awareness on cancer and non-communicable diseases.",
+          "Contributed efforts to control tobacco cancer and raised awareness on cancer prevention.",
+          "Provided 15 days of social service to help educate the public on cancer-related issues.",
+          "Awarded a Gold Medal and Cup for outstanding contribution to the cause of cancer control.",
+        ]}
+      />
+    ),
+  },
 ];
