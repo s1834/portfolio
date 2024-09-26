@@ -1,7 +1,7 @@
 import { About } from "@/app/components/pages/About";
 import { Dock } from "@/app/components/pages/Dock";
 import { Experience } from "@/app/components/pages/Experience";
-import { Skills } from "@/app/components/pages/Skills";
+// import { Skills } from "@/app/components/pages/Skills";
 import { Projects } from "@/app/components/pages/Projects";
 import { Achievements } from "@/app/components/pages/Achievements";
 import { Contact } from "@/app/components/pages/Contact";
@@ -15,7 +15,7 @@ export default function Home() {
       <About />
       <Dock />
       <Experience />
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
       <Achievements />
       <Contact />

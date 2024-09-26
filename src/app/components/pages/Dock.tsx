@@ -5,7 +5,7 @@ import { FloatingDock } from "@/app/components/ui/floating-dock";
 import {
   IconHome,
   IconBriefcase,
-  IconCode,
+  // IconCode,
   IconDeviceImacCode,
   IconTrophy,
   IconPhone,
@@ -30,13 +30,13 @@ export function Dock() {
       ),
       href: "#Experience",
     },
-    {
-      title: "Skills",
-      icon: (
-        <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#Skills",
-    },
+    // {
+    //   title: "Skills",
+    //   icon: (
+    //     <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "#Skills",
+    // },
     {
       title: "Projects",
       icon: (
