@@ -2,6 +2,14 @@
 
 import React from "react";
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+} from "@nextui-org/react";
 
 export function About() {
   return (
@@ -19,7 +27,7 @@ export function About() {
               href="#Contact"
               className="cursor-pointer z-50 text-white/60 text-md pointer-events-auto"
             >
-              ➞<span className="underline">Get in touch</span>
+              ➞<span className="underline p-1">Get in touch</span>
             </a>
           </p>
         </div>
