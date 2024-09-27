@@ -12,49 +12,66 @@ export function Projects() {
       title: "Portfolio",
       description: "#nextjs #tailwindcss #typescript",
       imageSrc: "/images/projects/portfolio.png",
-      link: "https://github.com/s1834/portfolio",
+      tryNowLink: "https://shubhshah.xyz",
+      iconLink: "https://github.com/s1834/portfolio",
+      icon: IconBrandGithub,
     },
     {
       title: "Skill Connect",
       description: "#nextjs #mongodb #tailwindcss #typescript",
       imageSrc: "/images/projects/skill-connect.png",
-      link: "https://github.com/s1834/skill-connect",
+      tryNowLink: "https://github.com/s1834/skill-connect",
+      iconLink: "https://github.com/s1834/skill-connect",
+      icon: IconBrandGithub,
     },
     {
       title: "Recap",
       description: "#swift #figma",
       imageSrc: "/images/projects/recap.jpeg",
-      link: "https://www.figma.com/design/wqGScOcEbzKn30uZ60U81a/Recap",
+      tryNowLink:
+        "https://www.figma.com/proto/wqGScOcEbzKn30uZ60U81a/Recap?page-id=0%3A1&node-id=534-796&starting-point-node-id=534%3A788&t=5sQGo9uipelP9rWe-1",
+      iconLink: "https://www.figma.com/design/wqGScOcEbzKn30uZ60U81a/Recap",
+      icon: IconBrandFigma,
     },
     {
       title: "Forkify App",
       description: "#javascript #html #css",
       imageSrc: "/images/projects/forkify.png",
-      link: "https://github.com/s1834/forkify-app",
+      tryNowLink: "https://s1834-forkify-app.netlify.app",
+      iconLink: "https://github.com/s1834/forkify-app",
+      icon: IconBrandGithub,
     },
     {
       title: "Employee Management System",
       description: "#reactjs #nodejs #mysql #tailwindcss #javascript",
       imageSrc: "/images/projects/employee-management-system.png",
-      link: "https://github.com/s1834/employee-management-system",
+      tryNowLink: "https://s1834-employee-management-system.vercel.app",
+      iconLink: "https://github.com/s1834/employee-management-system",
+      icon: IconBrandGithub,
     },
     {
       title: "Kidzee Website",
       description: "#html #css",
       imageSrc: "/images/projects/kidzee.png",
-      link: "https://github.com/s1834/kidzee-website",
+      tryNowLink: "https://kidzee-website.netlify.app",
+      iconLink: "https://github.com/s1834/kidzee-website",
+      icon: IconBrandGithub,
     },
     {
       title: "Pet Sales System",
       description: "#python #flask #html #tailwindcss",
       imageSrc: "/images/projects/pet-sales-system.png",
-      link: "https://github.com/s1834/Pet-Sales-System",
+      tryNowLink: "https://pet-sales-system.vercel.app/",
+      iconLink: "https://github.com/s1834/Pet-Sales-System",
+      icon: IconBrandGithub,
     },
     {
       title: "FOSS Project: FIYOC",
       description: "#javascript #html #tailwindcss",
       imageSrc: "/images/projects/fiyoc.png",
-      link: "https://github.com/s1834/FOSS-PROJECT",
+      tryNowLink: "https://foss-project.vercel.app",
+      iconLink: "https://github.com/s1834/FOSS-PROJECT",
+      icon: IconBrandGithub,
     },
   ];
 
@@ -90,18 +107,11 @@ export function Projects() {
                 />
               </CardItem>
               <div className="flex justify-between items-center mt-20">
-                {/* <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href={card.link}
-                  target="__blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                >
-                  Try now →
-                </CardItem> */}
                 <CardItem
                   translateZ={20}
-                  as="button"
+                  as={Link}
+                  href={card.tryNowLink}
+                  target="__blank"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
                   Try now →
@@ -109,21 +119,16 @@ export function Projects() {
                 <CardItem
                   translateZ={20}
                   as={Link}
-                  href={card.link}
+                  href={card.iconLink}
                   target="__blank"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
                   <div className="h-12 w-12 rounded-full bg-black dark:bg-white flex items-center justify-center">
-                    <IconBrandGithub className="h-6 w-6 dark:text-black text-white" />
+                    {
+                      <card.icon className="h-6 w-6 dark:text-black text-white" />
+                    }
                   </div>
                 </CardItem>
-                {/* <CardItem
-                  translateZ={20}
-                  as="button"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                >
-                  Case Study
-                </CardItem> */}
               </div>
             </CardBody>
           </CardContainer>
