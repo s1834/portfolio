@@ -1,17 +1,17 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Timeline } from "@/app/components/ui/timeline";
 
 interface ContentProps {
-  content: string[];
+  content: ReactNode[];
 }
 
 const Content: React.FC<ContentProps> = ({ content }) => {
   return (
     <div className="p-6 space-y-8">
       <div className="p-6 text-black dark:text-white rounded-lg shadow-md space-y-6">
-        {content.map((text: string, index: number) => (
+        {content.map((item: ReactNode, index: number) => (
           <React.Fragment key={index}>
-            <p>{text}</p>
+            <p>{item}</p>
             <hr className="border-black dark:border-white transition-transform duration-300 transform hover:scale-x-110" />
           </React.Fragment>
         ))}
@@ -27,8 +27,30 @@ export function Achievements() {
       content: (
         <Content
           content={[
-            "Successfully contributed a crucial testcase to the LeetCode Medium problem “846. Hand of Straights”, which was officially accepted, making the problem more robust and comprehensive.",
-            "Emerged as one of the select few (top 1%) chosen for the exclusive iOS Student Developer program with Swift offered by Apple and Infosys at SRM Institute of Science and Technology",
+            <>
+              Successfully contributed a crucial{" "}
+              <span className="text-[#5046e6] font-bold">testcase</span> to the{" "}
+              <span className="text-[#5046e6] font-bold">LeetCode Medium</span>{" "}
+              problem{" "}
+              <span className="text-[#5046e6] font-bold">
+                "846. Hand of Straights"
+              </span>
+              , which was officially accepted, making the problem more robust
+              and comprehensive.
+            </>,
+            <>
+              Emerged as one of the select few{" "}
+              <span className="text-[#5046e6] font-bold">(top 1%)</span> chosen
+              for the exclusive{" "}
+              <span className="text-[#5046e6] font-bold">
+                iOS Student Developer program
+              </span>{" "}
+              with Swift offered{" "}
+              <span className="text-[#5046e6] font-bold">
+                by Apple and Infosys
+              </span>{" "}
+              at SRM Institute of Science and Technology.
+            </>,
           ]}
         />
       ),
@@ -38,9 +60,40 @@ export function Achievements() {
       content: (
         <Content
           content={[
-            "Ranked 4th out of 800 teams in an OODP hackathon organized by Cognizant and SRMIST.",
-            "Honored as an “NPTEL Star” - NPTEL BELIEVERS for the session Jul-Dec 2023, an exclusive honor conferred upon only 1009 (∼0.14%) candidates out of 710,413 exam registrants.",
-            'Earned "Elite" certifications in both the Programming in Java and Python for Data Science NPTEL courses, demonstrating excellence in these competitive examinations.',
+            <>
+              Ranked{" "}
+              <span className="text-[#5046e6] font-bold">
+                4th out of 800 teams
+              </span>{" "}
+              in an{" "}
+              <span className="text-[#5046e6] font-bold">OODP hackathon</span>{" "}
+              organized by{" "}
+              <span className="text-[#5046e6] font-bold">
+                Cognizant and SRMIST
+              </span>
+              .
+            </>,
+            <>
+              Honored as an{" "}
+              <span className="text-[#5046e6] font-bold">
+                “NPTEL Star” - NPTEL BELIEVERS
+              </span>{" "}
+              for the session Jul-Dec 2023, an exclusive honor conferred upon
+              only{" "}
+              <span className="text-[#5046e6] font-bold">
+                1009 (∼0.14%) candidates out of 710,413
+              </span>{" "}
+              exam registrants.
+            </>,
+            <>
+              Earned{" "}
+              <span className="text-[#5046e6] font-bold">
+                Elite certifications
+              </span>{" "}
+              in both the Programming in Java and Python for Data Science{" "}
+              <span className="text-[#5046e6] font-bold">NPTEL courses</span>,
+              demonstrating excellence in these competitive examinations.
+            </>,
           ]}
         />
       ),
@@ -50,8 +103,30 @@ export function Achievements() {
       content: (
         <Content
           content={[
-            "Secured 1st place at the DATAKON - 2022: Bug-Out coding contest, organized by the Department of Data Science and Business Systems at SRMIST.",
-            "Awarded the 'Pratibha Samman 2022' for exemplary academic achievements in Class XII CBSE Board Examinations by the Nimar Sahodaya School Complex.",
+            <>
+              Secured{" "}
+              <span className="text-[#5046e6] font-bold">1st place</span> at the{" "}
+              <span className="text-[#5046e6] font-bold">
+                DATAKON - 2022: Bug-Out coding contest
+              </span>
+              , organized by the{" "}
+              <span className="text-[#5046e6] font-bold">
+                Department of Data Science and Business Systems
+              </span>{" "}
+              at <span className="text-[#5046e6] font-bold">SRMIST</span>.
+            </>,
+            <>
+              Awarded the{" "}
+              <span className="text-[#5046e6] font-bold">
+                'Pratibha Samman 2022'
+              </span>{" "}
+              for exemplary academic achievements in Class XII CBSE Board
+              Examinations by the{" "}
+              <span className="text-[#5046e6] font-bold">
+                Nimar Sahodaya School Complex
+              </span>
+              .
+            </>,
           ]}
         />
       ),
@@ -61,12 +136,59 @@ export function Achievements() {
       content: (
         <Content
           content={[
-            "Represented at the national level in the CBSE National Science Exhibition (2019-2020).",
-            "Won the CBSE Regional Science Exhibition/Fair (2019-2020).",
-            "Achieved a world record for the Longest Martial Arts Marathon in a Relay, recognized in the Golden Book of World Records (Dec 2015).",
-            "Represented as a state-level Taekwon-do player in the M.P. State Taekwon-do Championship.",
-            "3-times consecutive winner in the BDSKA District Karate Championship (2013, 2014, 2015).",
-            "Achieved consecutive victories in horse riding competitions at Indore Public School events, winning 1st place three times in a row (2016, 2017, 2018).",
+            <>
+              Represented at the national level in the{" "}
+              <span className="text-[#5046e6] font-bold">
+                CBSE National Science Exhibition
+              </span>{" "}
+              (2019-2020).
+            </>,
+            <>
+              Won the{" "}
+              <span className="text-[#5046e6] font-bold">
+                CBSE Regional Science Exhibition/Fair
+              </span>{" "}
+              (2019-2020).
+            </>,
+            <>
+              Achieved a world record for the{" "}
+              <span className="text-[#5046e6] font-bold">
+                Longest Martial Arts Marathon in a Relay
+              </span>
+              , recognized in the
+              <span className="text-[#5046e6] font-bold">
+                {" "}
+                Golden Book of World Records
+              </span>{" "}
+              (Dec 2015).
+            </>,
+            <>
+              Represented as a{" "}
+              <span className="text-[#5046e6] font-bold">
+                State-level Taekwon-do player
+              </span>{" "}
+              in the M.P. State Taekwon-do Championship.
+            </>,
+            <>
+              <span className="text-[#5046e6] font-bold">3-times</span>{" "}
+              consecutive winner in the{" "}
+              <span className="text-[#5046e6] font-bold">
+                BDSKA District Karate Championship
+              </span>{" "}
+              (2013, 2014, 2015).
+            </>,
+            <>
+              Achieved consecutive victories in{" "}
+              <span className="text-[#5046e6] font-bold">
+                Horse Riding competitions
+              </span>{" "}
+              at Indore Public School events, winning
+              <span className="text-[#5046e6] font-bold">
+                {" "}
+                1st place three times in a row
+              </span>{" "}
+              (2016, 2017, 2018).
+            </>,
           ]}
         />
       ),
