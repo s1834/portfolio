@@ -115,9 +115,11 @@ export function Contact() {
           <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
           <div className="flex flex-row space-x-4">
+            {/* GitHub Button */}
             <button
               className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-              type="submit"
+              onClick={() => window.open("https://github.com/s1834", "_blank")}
+              type="button"
             >
               <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
               <span className="text-neutral-700 dark:text-neutral-300 text-sm">
@@ -125,9 +127,14 @@ export function Contact() {
               </span>
               <BottomGradient />
             </button>
+
+            {/* LinkedIn Button */}
             <button
               className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-              type="submit"
+              onClick={() =>
+                window.open("https://linkedin.com/in/s1834", "_blank")
+              }
+              type="button"
             >
               <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
               <span className="text-neutral-700 dark:text-neutral-300 text-sm">
@@ -135,9 +142,12 @@ export function Contact() {
               </span>
               <BottomGradient />
             </button>
+
+            {/* X (Twitter) Button */}
             <button
               className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-              type="submit"
+              onClick={() => window.open("https://twitter.com/s1834", "_blank")}
+              type="button"
             >
               <IconBrandX className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
               <span className="text-neutral-700 dark:text-neutral-300 text-sm">
