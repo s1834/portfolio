@@ -62,22 +62,27 @@ export function Contact() {
     const key = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !key) {
-      console.error("Failed to send message. Please try again later.");
+      console.error(
+        "Missing environment variables. Please ensure Service ID, Template ID, and Public Key are properly set."
+      );
       toast.error("Failed to send message. Please try again later.");
       return;
     }
+
     if (form.current) {
       emailjs.sendForm(serviceId, templateId, form.current, key).then(
         () => {
+          console.log("Email successfully sent!");
           toast.success("Message Sent!");
           (e.target as HTMLFormElement).reset();
         },
         (error) => {
-          console.error("Email failed...", error);
+          console.error("Email sending failed. Error details:", error);
           toast.error("Failed to send message. Please try again later.");
         }
       );
     } else {
+      console.error("Form reference is null. Unable to send email.");
       toast.error("Failed to send message. Please try again later.");
     }
   };
