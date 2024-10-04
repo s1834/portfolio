@@ -17,7 +17,10 @@ const Label = React.forwardRef<
       className
     )}
     {...props}
-  />
+  >
+    {props.children}
+    {<span className="text-[#5046e6]">*</span>}
+  </LabelPrimitive.Root>
 ));
 Label.displayName = LabelPrimitive.Root.displayName;
 

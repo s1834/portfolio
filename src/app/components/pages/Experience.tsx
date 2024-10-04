@@ -18,12 +18,10 @@ export function Experience() {
   );
 }
 
-// Define types for Content props
 interface ContentProps {
   content: string[];
 }
 
-// Content component with explicit typing
 const Content: React.FC<ContentProps> = ({ content }) => {
   return (
     <div className="p-6 space-y-8">
@@ -39,7 +37,6 @@ const Content: React.FC<ContentProps> = ({ content }) => {
   );
 };
 
-// Sample data for cards
 const data = [
   {
     category: "Co-Founder",

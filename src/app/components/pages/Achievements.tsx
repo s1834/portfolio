@@ -30,13 +30,19 @@ export function Achievements() {
             <>
               Successfully contributed a crucial{" "}
               <span className="text-[#5046e6] font-bold">testcase</span> to the{" "}
-              <span className="text-[#5046e6] font-bold">LeetCode Medium</span>{" "}
-              problem{" "}
               <span className="text-[#5046e6] font-bold">
                 "846. Hand of Straights"
               </span>
               , which was officially accepted, making the problem more robust
-              and comprehensive.
+              and comprehensive.{" "}
+              <a
+                href="https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/22624"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (GitHub Issue #22624)
+              </a>
             </>,
             <>
               Emerged as one of the select few{" "}
@@ -49,7 +55,15 @@ export function Achievements() {
               <span className="text-[#5046e6] font-bold">
                 by Apple and Infosys
               </span>{" "}
-              at SRM Institute of Science and Technology.
+              at SRM Institute of Science and Technology.{" "}
+              <a
+                href="https://drive.google.com/file/d/1Q44YmcrL-I7yfMqY1EUjQN9iSmFuDemG/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Selection Letter)
+              </a>
             </>,
           ]}
         />
@@ -71,7 +85,31 @@ export function Achievements() {
               <span className="text-[#5046e6] font-bold">
                 Cognizant and SRMIST
               </span>
-              .
+              .{" "}
+              <a
+                href="https://drive.google.com/file/d/1RhR1SVFgyYg8zcfc8ZQ5KhZISFcpXpBI/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>{" "}
+              <a
+                href="https://github.com/s1834/Pet-Sales-System"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (GitHub)
+              </a>{" "}
+              <a
+                href="https://www.pet.shubhshah.xyz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (Try it here)
+              </a>
             </>,
             <>
               Honored as an{" "}
@@ -83,7 +121,15 @@ export function Achievements() {
               <span className="text-[#5046e6] font-bold">
                 1009 (∼0.14%) candidates out of 710,413
               </span>{" "}
-              exam registrants.
+              exam registrants.{" "}
+              <a
+                href="https://drive.google.com/file/d/17pZdafupKBNrjQOmIZuL7qVcnMwvt6q9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>
             </>,
             <>
               Earned{" "}
@@ -92,7 +138,23 @@ export function Achievements() {
               </span>{" "}
               in both the Programming in Java and Python for Data Science{" "}
               <span className="text-[#5046e6] font-bold">NPTEL courses</span>,
-              demonstrating excellence in these competitive examinations.
+              demonstrating excellence in these competitive examinations.{" "}
+              <a
+                href="https://archive.nptel.ac.in/content/noc/NOC23/SEM2/Ecertificates/106/noc23-cs74/Course/NPTEL23CS74S9335488720338643.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (Java - View Certificate)
+              </a>{" "}
+              <a
+                href="https://archive.nptel.ac.in/content/noc/NOC23/SEM2/Ecertificates/106/noc23-cs99/Course/NPTEL23CS99S4533568310104705.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (Python - View Certificate)
+              </a>
             </>,
           ]}
         />
@@ -113,7 +175,15 @@ export function Achievements() {
               <span className="text-[#5046e6] font-bold">
                 Department of Data Science and Business Systems
               </span>{" "}
-              at <span className="text-[#5046e6] font-bold">SRMIST</span>.
+              at <span className="text-[#5046e6] font-bold">SRMIST</span>.{" "}
+              <a
+                href="https://drive.google.com/drive/folders/1s74Mz_kvtRg1ZCTzbLMehSRzhJWPLkJM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>
             </>,
             <>
               Awarded the{" "}
@@ -125,7 +195,15 @@ export function Achievements() {
               <span className="text-[#5046e6] font-bold">
                 Nimar Sahodaya School Complex
               </span>
-              .
+              .{" "}
+              <a
+                href="https://drive.google.com/file/d/1fq9-3XlupzvZf-egxmukvKZ98lqCW2mW"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>
             </>,
           ]}
         />
@@ -141,14 +219,30 @@ export function Achievements() {
               <span className="text-[#5046e6] font-bold">
                 CBSE National Science Exhibition
               </span>{" "}
-              (2019-2020).
+              (2019-2020).{" "}
+              <a
+                href="https://drive.google.com/file/d/1ClSSRmwbOJ6htzWznV6m_xTne3pkYX7z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>
             </>,
             <>
               Won the{" "}
               <span className="text-[#5046e6] font-bold">
                 CBSE Regional Science Exhibition/Fair
               </span>{" "}
-              (2019-2020).
+              (2019-2020).{" "}
+              <a
+                href="https://drive.google.com/file/d/1QL8cHXKzhG3MUgaL-O6xq-Alo-x3UkZG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>
             </>,
             <>
               Achieved a world record for the{" "}
@@ -160,14 +254,30 @@ export function Achievements() {
                 {" "}
                 Golden Book of World Records
               </span>{" "}
-              (Dec 2015).
+              (Dec 2015).{" "}
+              <a
+                href="https://drive.google.com/file/d/1wAl_nCvXfH4UIoCF91CAZ4Bdom4dQjd3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>
             </>,
             <>
               Represented as a{" "}
               <span className="text-[#5046e6] font-bold">
                 State-level Taekwon-do player
               </span>{" "}
-              in the M.P. State Taekwon-do Championship.
+              in the M.P. State Taekwon-do Championship.{" "}
+              <a
+                href="https://drive.google.com/file/d/1_OyFfrVlDdG7XLx3lGYvegkFwRuP78Rv"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificate)
+              </a>
             </>,
             <>
               <span className="text-[#5046e6] font-bold">3-times</span>{" "}
@@ -175,7 +285,15 @@ export function Achievements() {
               <span className="text-[#5046e6] font-bold">
                 BDSKA District Karate Championship
               </span>{" "}
-              (2013, 2014, 2015).
+              (2013, 2014, 2015).{" "}
+              <a
+                href="https://drive.google.com/drive/folders/13Dpxuw7gEEcfxLr42vTJz_e8WO2bDzvI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificates)
+              </a>
             </>,
             <>
               Achieved consecutive victories in{" "}
@@ -187,7 +305,15 @@ export function Achievements() {
                 {" "}
                 1st place three times in a row
               </span>{" "}
-              (2016, 2017, 2018).
+              (2016, 2017, 2018).{" "}
+              <a
+                href="https://drive.google.com/drive/folders/1ReoDfEYtEOCWMOMzlYz0OSZosohkalK-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00BFFF] font-bold"
+              >
+                (View Certificates)
+              </a>
             </>,
           ]}
         />

@@ -1,4 +1,4 @@
-// "use client"; // Add this to make the component a Client Component
+// "use client";
 
 // import { useState, useEffect } from "react";
 // import {
