@@ -468,7 +468,7 @@ const LabelInputContainer = ({
 //           setStatusMessage("Your message has been sent successfully!");
 //         },
 //         (error) => {
-//           console.log("FAILED...", error.text);
+//           console.error("FAILED...", error.text);
 //           setStatusMessage("Failed to send your message. Please try again.");
 //         }
 //       );
@@ -495,7 +495,7 @@ const LabelInputContainer = ({
 //               <Label htmlFor="fullname">Full Name</Label>
 //               <Input
 //                 id="fullname"
-//                 name="user_name"
+//                 name="from_name"
 //                 placeholder="John Doe"
 //                 type="text"
 //                 className="w-full"
@@ -506,7 +506,7 @@ const LabelInputContainer = ({
 //             <Label htmlFor="email">Email Address</Label>
 //             <Input
 //               id="email"
-//               name="user_email"
+//               name="reply_to"
 //               placeholder="johndoe@protonmail.com"
 //               type="email"
 //               className="w-full"
@@ -542,17 +542,17 @@ const LabelInputContainer = ({
 //             <SocialButton
 //               Icon={IconBrandGithub}
 //               label="GitHub"
-//               href="https://github.com"
+//               href="https://github.com/s1834"
 //             />
 //             <SocialButton
 //               Icon={IconBrandLinkedin}
 //               label="LinkedIn"
-//               href="https://linkedin.com"
+//               href="https://linkedin.com/in/s1834"
 //             />
 //             <SocialButton
 //               Icon={IconBrandX}
 //               label="X (Twitter)"
-//               href="https://twitter.com"
+//               href="https://twitter.com/s1834"
 //             />
 //           </div>
 //         </form>
@@ -565,6 +565,7 @@ const LabelInputContainer = ({
 //   );
 // }
 
+// // Bottom Gradient for hover effect
 // const BottomGradient = () => {
 //   return (
 //     <>
@@ -574,6 +575,7 @@ const LabelInputContainer = ({
 //   );
 // };
 
+// // LabelInputContainer component for handling form input containers
 // const LabelInputContainer = ({
 //   children,
 //   className,
@@ -588,7 +590,7 @@ const LabelInputContainer = ({
 //   );
 // };
 
-// // SocialButton component
+// // SocialButton component for the social media buttons
 // const SocialButton = ({
 //   Icon,
 //   label,

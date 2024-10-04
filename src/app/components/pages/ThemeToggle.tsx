@@ -8,7 +8,8 @@ export function ThemeToggle() {
   useEffect(() => {
     // Ensure this runs only on the client side
     if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme") as "light" | "dark";
+      // const savedTheme = localStorage.getItem("theme") as "light" | "dark";
+      const savedTheme = "dark";
       if (savedTheme) {
         setTheme(savedTheme);
         document.documentElement.classList.toggle(
