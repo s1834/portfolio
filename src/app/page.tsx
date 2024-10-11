@@ -3,7 +3,7 @@ import { About } from "@/app/components/pages/About";
 import { Dock } from "@/app/components/pages/Dock";
 import { Experience } from "@/app/components/pages/Experience";
 // import { Skills } from "@/app/components/pages/Skills";
-import { Projects } from "@/app/components/pages/Projects";
+import Projects from "@/app/projects/page";
 import { Achievements } from "@/app/components/pages/Achievements";
 import { Contact } from "@/app/components/pages/Contact";
 // import { Temp } from "@/app/components/pages/Temp";
