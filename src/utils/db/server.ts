@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const MONGO_URI = process.env.DATABASE_URI.replace(
+const MONGO_URI = process.env.NEXT_PUBLIC_DATABASE_URI.replace(
   "<PASSWORD>",
-  process.env.DATABASE_PASSWORD
+  process.env.NEXT_PUBLIC_DATABASE_PASSWORD
 );
 
 const DBInstance = async () => {

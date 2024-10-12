@@ -2,7 +2,6 @@ import DBInstance from "@/utils/db/server";
 import { NextResponse } from "next/server";
 const Projects = require("@/utils/models/projects.models");
 
-// Connect to the database
 DBInstance();
 
 export async function GET(req: Request) {
@@ -33,12 +32,10 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    // Check if the body is an array
     if (!Array.isArray(body)) {
       throw new Error("Invalid input: expected an array of projects.");
     }
 
-    // Create an array to hold all the new projects
     const newProjects = body.map((project) => {
       return new Projects({
         title: project.title,
@@ -50,7 +47,6 @@ export async function POST(req: Request) {
       });
     });
 
-    // Save all projects to the database
     const savedProjects = await Projects.insertMany(newProjects);
 
     return NextResponse.json(
