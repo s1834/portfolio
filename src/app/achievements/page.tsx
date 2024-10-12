@@ -1,15 +1,11 @@
 import React, { ReactNode } from "react";
 import { Timeline } from "@/app/components/ui/timeline";
 
-interface ContentProps {
-  content: ReactNode[];
-}
-
-const Content: React.FC<ContentProps> = ({ content }) => {
+const Content = ({ content }) => {
   return (
     <div className="p-6 space-y-8">
       <div className="p-6 text-black dark:text-white rounded-lg shadow-md space-y-6">
-        {content.map((item: ReactNode, index: number) => (
+        {content.map((item, index) => (
           <React.Fragment key={index}>
             <p>{item}</p>
             <hr className="border-black dark:border-white transition-transform duration-300 transform hover:scale-x-110" />
@@ -20,7 +16,7 @@ const Content: React.FC<ContentProps> = ({ content }) => {
   );
 };
 
-export function Achievements() {
+export default function Page() {
   const data = [
     {
       title: "2024",

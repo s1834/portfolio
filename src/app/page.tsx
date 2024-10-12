@@ -1,10 +1,10 @@
 // import { Nav } from "@/app/components/pages/Nav";
-import { About } from "@/app/components/pages/About";
+import About from "@/app/about/page";
 import { Dock } from "@/app/components/pages/Dock";
 import Experience from "@/app/experience/page";
 // import { Skills } from "@/app/components/pages/Skills";
 import Projects from "@/app/projects/page";
-import { Achievements } from "@/app/components/pages/Achievements";
+import Achievements from "@/app/achievements/page";
 import Contact from "@/app/contact/page";
 // import { Temp } from "@/app/components/pages/Temp";
 

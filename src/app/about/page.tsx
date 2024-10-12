@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
+import { BackgroundGradientAnimation } from "@/app/components/ui/background-gradient-animation";
 import {
   Navbar,
   NavbarBrand,
@@ -11,7 +11,7 @@ import {
   Button,
 } from "@nextui-org/react";
 
-export function About() {
+export default function Page() {
   return (
     <BackgroundGradientAnimation>
       <div id="About" className="bg-white dark:bg-neutral-950 min-h-screen">
