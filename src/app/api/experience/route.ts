@@ -1,6 +1,6 @@
 import DBInstance from "@/utils/db/server";
 import { NextResponse } from "next/server";
-import Experience from "@/utils/models/experience.models";
+const Experience = require("@/utils/models/experience.models");
 
 DBInstance();
 
@@ -53,8 +53,9 @@ export async function POST(req: Request) {
     );
   } catch (err) {
     console.error(err);
+    const errorMessage = (err as Error)?.message || "An unknown error occurred";
     return NextResponse.json(
-      { message: "Failed to create experiences", error: err.message },
+      { message: "Failed to create experiences", error: errorMessage },
       { status: 400 }
     );
   }

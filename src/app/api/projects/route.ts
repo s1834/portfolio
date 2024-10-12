@@ -55,8 +55,9 @@ export async function POST(req: Request) {
     );
   } catch (err) {
     console.error(err);
+    const errorMessage = (err as Error)?.message || "An unknown error occurred";
     return NextResponse.json(
-      { message: "Failed to create projects", error: err.message },
+      { message: "Failed to create projects", error: errorMessage },
       { status: 400 }
     );
   }

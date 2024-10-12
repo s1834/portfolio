@@ -5,7 +5,7 @@ import Experience from "@/app/experience/page";
 // import { Skills } from "@/app/components/pages/Skills";
 import Projects from "@/app/projects/page";
 import { Achievements } from "@/app/components/pages/Achievements";
-import { Contact } from "@/app/components/pages/Contact";
+import Contact from "@/app/contact/page";
 // import { Temp } from "@/app/components/pages/Temp";
 
 export default function Home() {

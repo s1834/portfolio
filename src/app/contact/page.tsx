@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+import { Label } from "@/app/components/ui/label";
+import { Input } from "@/app/components/ui/input";
 import { cn } from "@/lib/utils";
 import {
   IconBrandGithub,
@@ -12,7 +12,7 @@ import IconCloud from "@/app/components/magicui/icon-cloud";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
-export function Contact() {
+export default function Page() {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export function Contact() {
 
   const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
@@ -53,7 +53,7 @@ export function Contact() {
         () => {
           console.log("Email successfully sent!");
           toast.success("Message Sent!");
-          (e.target as HTMLFormElement).reset();
+          e.target.reset();
         },
         (error) => {
           console.error("Email sending failed. Error details:", error);
@@ -161,13 +161,7 @@ const BottomGradient = () => (
   </>
 );
 
-const LabelInputContainer = ({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+const LabelInputContainer = ({ children, className = "" }) => {
   return (
     <div className={cn("flex flex-col space-y-2 w-full", className)}>
       {children}
@@ -175,15 +169,7 @@ const LabelInputContainer = ({
   );
 };
 
-const SocialButton = ({
-  href,
-  icon,
-  label,
-}: {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-}) => {
+const SocialButton = ({ href, icon, label }) => {
   return (
     <button
       className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
