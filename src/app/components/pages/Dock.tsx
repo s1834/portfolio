@@ -64,7 +64,7 @@ export function Dock() {
       icon: (
         <IconFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "https://drive.google.com/file/d/1Ewd-fmfalDzZoSw2W4-DaJTFWUXtTj_v/",
+      href: "https://drive.google.com/file/d/1crUAxIW2iuMknzrkX1oucdzqEPbH6yhk/",
     },
     {
       title: "Theme",
