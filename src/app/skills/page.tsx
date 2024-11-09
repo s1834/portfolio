@@ -37,8 +37,12 @@ import React, { useEffect, useState } from "react";
 //   "vercel",
 // ];
 
+interface Skill {
+  slug: string;
+}
+
 export default function Page() {
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchSkills = async () => {
@@ -46,7 +50,7 @@ export default function Page() {
         const response = await fetch("/api/skills");
         const data = await response.json();
         if (data && data.data) {
-          setSkills(data.data.map((skill) => skill.slug));
+          setSkills(data.data.map((skill: Skill) => skill.slug));
         }
       } catch (error) {
         console.error("Error fetching skills:", error);

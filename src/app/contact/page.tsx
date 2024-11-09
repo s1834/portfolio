@@ -12,8 +12,12 @@ import IconCloud from "@/app/components/magicui/icon-cloud";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
+interface Skill {
+  slug: string;
+}
+
 export default function Page() {
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchSkills = async () => {
@@ -21,7 +25,7 @@ export default function Page() {
         const response = await fetch("/api/skills");
         const data = await response.json();
         if (data && data.data) {
-          setSkills(data.data.map((skill) => skill.slug));
+          setSkills(data.data.map((skill: Skill) => skill.slug));
         }
       } catch (error) {
         console.error("Error fetching skills:", error);
@@ -33,7 +37,7 @@ export default function Page() {
 
   const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
     const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
@@ -48,22 +52,19 @@ export default function Page() {
       return;
     }
 
-    if (form.current) {
-      emailjs.sendForm(serviceId, templateId, form.current, key).then(
+    emailjs
+      .sendForm(serviceId, templateId, e.target as HTMLFormElement, key)
+      .then(
         () => {
           console.log("Email successfully sent!");
           toast.success("Message Sent!");
-          e.target.reset();
+          (e.target as HTMLFormElement).reset();
         },
         (error) => {
           console.error("Email sending failed. Error details:", error);
           toast.error("Failed to send message. Please try again later.");
         }
       );
-    } else {
-      console.error("Form reference is null. Unable to send email.");
-      toast.error("Failed to send message. Please try again later.");
-    }
   };
 
   return (
@@ -161,7 +162,15 @@ const BottomGradient = () => (
   </>
 );
 
-const LabelInputContainer = ({ children, className = "" }) => {
+interface LabelInputContainerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const LabelInputContainer = ({
+  children,
+  className = "",
+}: LabelInputContainerProps) => {
   return (
     <div className={cn("flex flex-col space-y-2 w-full", className)}>
       {children}
@@ -169,7 +178,13 @@ const LabelInputContainer = ({ children, className = "" }) => {
   );
 };
 
-const SocialButton = ({ href, icon, label }) => {
+interface SocialButtonProps {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+}
+
+const SocialButton = ({ href, icon, label }: SocialButtonProps) => {
   return (
     <button
       className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"

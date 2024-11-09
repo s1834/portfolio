@@ -1,7 +1,11 @@
 import React, { ReactNode } from "react";
 import { Timeline } from "@/app/components/ui/timeline";
 
-const Content = ({ content }) => {
+interface ContentProps {
+  content: ReactNode[];
+}
+
+const Content = ({ content }: ContentProps) => {
   return (
     <div className="p-6 space-y-8">
       <div className="p-6 text-black dark:text-white rounded-lg shadow-md space-y-6">
@@ -15,7 +19,6 @@ const Content = ({ content }) => {
     </div>
   );
 };
-
 export default function Page() {
   const data = [
     {
