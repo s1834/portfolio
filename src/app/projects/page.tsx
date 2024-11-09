@@ -8,20 +8,88 @@ import { IconBrandGithub, IconBrandFigma } from "@tabler/icons-react";
 import axios from "axios";
 
 export default function Page() {
-  const [projects, setProjects] = useState([]);
+  // const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await axios.get("/api/projects");
-        setProjects(response.data.data);
-      } catch (error) {
-        console.error("Error fetching projects:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     try {
+  //       const response = await axios.get("/api/projects");
+  //       setProjects(response.data.data);
+  //     } catch (error) {
+  //       console.error("Error fetching projects:", error);
+  //     }
+  //   };
 
-    fetchProjects();
-  }, []);
+  //   fetchProjects();
+  // }, []);
+
+  const projects = [
+    {
+      title: "Portfolio",
+      description: "#nextjs #tailwindcss #typescript",
+      imageSrc: "/images/projects/portfolio.png",
+      tryNowLink: "https://shubhshah.xyz",
+      iconLink: "https://github.com/s1834/portfolio",
+      icon: "IconBrandGithub",
+    },
+    {
+      title: "Skill Connect",
+      description: "#nextjs #mongodb #tailwindcss #typescript",
+      imageSrc: "/images/projects/skill-connect.png",
+      tryNowLink: "https://github.com/s1834/skill-connect",
+      iconLink: "https://github.com/s1834/skill-connect",
+      icon: "IconBrandGithub",
+    },
+    {
+      title: "Recap",
+      description: "#swift #figma",
+      imageSrc: "/images/projects/recap.jpeg",
+      tryNowLink:
+        "https://www.figma.com/proto/wqGScOcEbzKn30uZ60U81a/Recap?page-id=0%3A1…",
+      iconLink: "https://www.figma.com/design/wqGScOcEbzKn30uZ60U81a/Recap",
+      icon: "IconBrandFigma",
+    },
+    {
+      title: "Forkify App",
+      description: "#javascript #html #css",
+      imageSrc: "/images/projects/forkify.png",
+      tryNowLink: "https://forkify.shubhshah.xyz",
+      iconLink: "https://github.com/s1834/forkify-app",
+      icon: "IconBrandGithub",
+    },
+    {
+      title: "Employee Management System",
+      description: "#reactjs #nodejs #mysql #tailwindcss #javascript",
+      imageSrc: "/images/projects/employee-management-system.png",
+      tryNowLink: "https://employee.shubhshah.xyz",
+      iconLink: "https://github.com/s1834/employee-management-system",
+      icon: "IconBrandGithub",
+    },
+    {
+      title: "Kidzee Website",
+      description: "#html #css",
+      imageSrc: "/images/projects/kidzee.png",
+      tryNowLink: "https://kidzee.shubhshah.xyz",
+      iconLink: "https://github.com/s1834/kidzee-website",
+      icon: "IconBrandGithub",
+    },
+    {
+      title: "Pet Sales System",
+      description: "#python #flask #html #tailwindcss",
+      imageSrc: "/images/projects/pet-sales-system.png",
+      tryNowLink: "https://www.pet.shubhshah.xyz",
+      iconLink: "https://github.com/s1834/Pet-Sales-System",
+      icon: "IconBrandGithub",
+    },
+    {
+      title: "FOSS Project: FIYOC",
+      description: "#javascript #html #tailwindcss",
+      imageSrc: "/images/projects/fiyoc.png",
+      tryNowLink: "https://foss.shubhshah.xyz",
+      iconLink: "https://github.com/s1834/FOSS-PROJECT",
+      icon: "IconBrandGithub",
+    },
+  ];
 
   return (
     <div className="w-full h-full py-20 mx-auto px-4 max-w-7xl" id="Projects">
