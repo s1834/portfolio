@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import { CardBody, CardContainer, CardItem } from "@/app/components/ui/3d-card";
 import Link from "next/link";
 import { IconBrandGithub, IconBrandFigma } from "@tabler/icons-react";
-import axios from "axios";
+import { EvervaultCard, Icon } from "@/app/components/ui/evervault-card";
+// import axios from "axios";
 
 export default function Page() {
   // const [projects, setProjects] = useState([]);
@@ -159,6 +160,28 @@ export default function Page() {
             Loading projects....
           </p>
         )}
+        <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[31.5rem] mt-20">
+          <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+          <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+          <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+          <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+
+          <EvervaultCard text="MORE PROJECTS" />
+
+          {/* <h2 className="dark:text-white text-black mt-4 text-sm font-light">
+            Check out my other projects and contributions!!
+          </h2> */}
+          {/* <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
+            <a
+              href="https://github.com/s1834"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="\ransition-colors duration-300 rounded-full px-4 py-2 text-sm font-medium"
+            >
+              GitHub →
+            </a>
+          </p> */}
+        </div>
       </div>
     </div>
   );
