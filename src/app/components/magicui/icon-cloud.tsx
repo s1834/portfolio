@@ -37,15 +37,31 @@ export const cloudProps: Omit<ICloud, "children"> = {
   },
 };
 
-export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
+// Define a color palette for icons
+const iconColors = [
+  "#FF6B6B", // Red
+  "#4ECDC4", // Teal
+  "#45B7D1", // Blue
+  "#96CEB4", // Green
+  "#FFEEAD", // Yellow
+  "#D4A5A5", // Pink
+  "#9B59B6", // Purple
+  "#3498DB", // Bright Blue
+  "#E74C3C", // Bright Red
+  "#2ECC71", // Bright Green
+];
+
+export const renderCustomIcon = (icon: SimpleIcon, theme: string, index: number) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
+  // Assign a color from the palette based on index
+  const iconColor = iconColors[index % iconColors.length];
 
   return renderSimpleIcon({
     icon,
     bgHex,
-    fallbackHex,
+    fallbackHex: iconColor, // Use the palette color as fallback
     minContrastRatio,
     size: 42,
     aProps: {
@@ -74,8 +90,8 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const renderedIcons = useMemo(() => {
     if (!data) return null;
 
-    return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "light")
+    return Object.values(data.simpleIcons).map((icon, index) =>
+      renderCustomIcon(icon, theme || "light", index)
     );
   }, [data, theme]);
 

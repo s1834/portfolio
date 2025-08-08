@@ -10,7 +10,7 @@ import Contact from "@/app/contact/page";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-white dark:bg-neutral-950">
+    <div className="relative min-h-screen bg-white dark:bg-black overflow-x-hidden">
       {/* <main className="flex max-h-screen flex-col items-center justify-between px-10 pt-5 bg-gradient-to-b from-custom-start to-custom-end ">
       </main> */}
       {/* <Nav /> */}

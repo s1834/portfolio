@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FloatingDock } from "@/app/components/ui/floating-dock";
 import {
   IconHome,
@@ -14,11 +14,38 @@ import {
 import { ThemeToggle } from "@/app/components/pages/ThemeToggle";
 
 export function Dock() {
+  const [activeSection, setActiveSection] = useState("About");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["About", "Experience", "Projects", "Achievements", "Contact"];
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= scrollPosition && rect.bottom >= scrollPosition) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const links = [
     {
       title: "Home",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconHome className={`h-full w-full transition-colors duration-300 ${
+          activeSection === "About" 
+            ? "text-blue-500" 
+            : "text-neutral-500 dark:text-neutral-300 hover:text-blue-500"
+        }`} />
       ),
       href: "#About",
     },
@@ -26,7 +53,11 @@ export function Dock() {
     {
       title: "Experience",
       icon: (
-        <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBriefcase className={`h-full w-full transition-colors duration-300 ${
+          activeSection === "Experience" 
+            ? "text-green-500" 
+            : "text-neutral-500 dark:text-neutral-300 hover:text-green-500"
+        }`} />
       ),
       href: "#Experience",
     },
@@ -40,7 +71,11 @@ export function Dock() {
     {
       title: "Projects",
       icon: (
-        <IconDeviceImacCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconDeviceImacCode className={`h-full w-full transition-colors duration-300 ${
+          activeSection === "Projects" 
+            ? "text-purple-500" 
+            : "text-neutral-500 dark:text-neutral-300 hover:text-purple-500"
+        }`} />
       ),
       href: "#Projects",
     },
@@ -48,23 +83,31 @@ export function Dock() {
     {
       title: "Achievements",
       icon: (
-        <IconTrophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconTrophy className={`h-full w-full transition-colors duration-300 ${
+          activeSection === "Achievements" 
+            ? "text-yellow-500" 
+            : "text-neutral-500 dark:text-neutral-300 hover:text-yellow-500"
+        }`} />
       ),
       href: "#Achievements",
     },
     {
       title: "Contact Me",
       icon: (
-        <IconPhone className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconPhone className={`h-full w-full transition-colors duration-300 ${
+          activeSection === "Contact" 
+            ? "text-pink-500" 
+            : "text-neutral-500 dark:text-neutral-300 hover:text-pink-500"
+        }`} />
       ),
       href: "#Contact",
     },
     {
       title: "Resume/CV",
       icon: (
-        <IconFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300 hover:text-orange-500 transition-colors duration-300" />
       ),
-      href: "https://drive.google.com/file/d/1hB_naVJ2GstwbtVPIXX46L9X0OYE5A5B/",
+      href: "https://drive.google.com/file/d/1-J_MCijd4nwldol7ILSW6930xMoQBAmb/",
     },
     {
       title: "Theme",
